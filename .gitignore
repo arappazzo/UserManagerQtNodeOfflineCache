@@ -1,0 +1,16 @@
+# Qt
+*.pro.user
+*.txt.user
+*build*
+*.o
+*.obj
+*.exe
+*.log
+
+# Node.js
+node_modules/
+users.db
+package-lock.json
+
+# Common
+*.bak
