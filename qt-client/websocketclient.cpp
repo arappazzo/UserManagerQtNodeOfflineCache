@@ -63,9 +63,11 @@ void WebSocketClient::onTextMessageReceived(const QString &message)
 
 void WebSocketClient::tryReconnect()
 {
-    if (m_webSocket.state() != QAbstractSocket::ConnectedState) {
+    if (m_webSocket.state() != QAbstractSocket::ConnectedState)
+    {
         qDebug() << "Trying to connect to WebSocket server at" << m_url;
         m_webSocket.open(m_url);
+        m_reconnectTimer.start();
     }
 }
 

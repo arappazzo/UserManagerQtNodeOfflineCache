@@ -187,3 +187,12 @@ void LocalDB::replaceTempId(int tempId, int realId)
     if (!q.exec())
         qWarning() << "replaceTempId FAILED:" << q.lastError();
 }
+
+void LocalDB::clearUsers()
+{
+    QSqlQuery q(m_db);
+    if (!q.exec("DELETE FROM users")) {
+        qWarning() << "clearUsers FAILED:" << q.lastError().text();
+    }
+}
+

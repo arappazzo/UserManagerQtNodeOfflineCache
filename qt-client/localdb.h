@@ -21,6 +21,7 @@ public:
     void insertUser(int id, const QString &name, int age); // insert or replace
     void saveUser(const QString &name, int age, int id);   // alias
     void deleteUser(int id);
+    void clearUsers();
 
     // pending ops
     void addPendingOperation(const QString &opType, int serverId, int localTempId, const QString &name, int age);
